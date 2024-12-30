@@ -1,0 +1,16 @@
+{{#var testName = string.pascalCase(name)}}
+{{#var type = string(type).toString()}}
+{{#var fileName = string(name).snakeCase().ext('.spec.ts').toString()}}
+{{{
+  exports({
+    to: app.makePath('tests/', type, fileName),
+  })
+}}}
+import { describe, it } from 'vitest'
+
+describe('{{testName}} Suite', () => {
+  describe('#{{testName}}', () => {
+    it.todo('', () => {})
+  })
+})
+
