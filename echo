@@ -1,1 +1,0 @@
-git diff --cached -- . ':(exclude)*lock*' | cody chat --stdin -m "Escreva uma mensagem commit para esse diff em ingles com convenções de commit"
